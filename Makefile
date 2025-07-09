@@ -1,7 +1,7 @@
 JAVAC=javac
 JAVA=java
 SRC_DIR=src
-TEST_DIR=test/src
+TEST_DIR=test
 BUILD_DIR=build
 RELEASE_DIR=release
 CLASSPATH=$(BUILD_DIR):.:"lib/*"
