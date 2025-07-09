@@ -27,3 +27,6 @@ release: build
 	mkdir -p $(RELEASE_DIR)
 	cp -r $(BUILD_DIR) $(RELEASE_DIR)/calculator-`date +%Y%m%d_%H%M%S`
 	echo "v1.0.0-`date +%Y%m%d_%H%M%S`" > .release-tag
+
+checkstyle:
+	java -jar lib/checkstyle-10.12.4-all.jar -c checkstyle.xml src/ test/
