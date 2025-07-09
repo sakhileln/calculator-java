@@ -4,6 +4,7 @@ WORKDIR /app
 
 COPY src/ src/
 COPY test/ test/
+RUN mkdir lib
 COPY lib/ lib/
 COPY Makefile .
 COPY .release-tag .release-tag
