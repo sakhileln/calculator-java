@@ -18,6 +18,7 @@ A simple Java CLI calculator with JUnit tests, Makefile automation, Docker suppo
 - `make clean` — Clean build and release folders
 - `make release` — Create release artifact and tag
 - `make all` — Build and test
+
 ## Dependencies
 - Put JUnit JARs in a `lib/` folder (download from [JUnit site](https://junit.org/junit4/)):
 ```markdown
@@ -53,4 +54,10 @@ calculator-java/
 ├── Makefile                   # Commands: build, test, run, clean, release
 ├── .release-tag               # Simple version tracking file
 ├── README.md                  # Project description, usage, and instructions
+```
+## Docker
+To run manually:
+```bash
+docker build -t java-calculator .
+docker run -it java-calculator
 ```
