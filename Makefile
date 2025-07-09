@@ -12,7 +12,7 @@ all: build test
 
 build:
 	mkdir -p $(BUILD_DIR)
-	$(JAVAC) -d $(BUILD_DIR) $(SRC_DIR)/*.java $(TEST_DIR)/*.java -cp "lib/*"
+	$(JAVAC) -d $(BUILD_DIR) -cp "lib/*:$(BUILD_DIR)" $(SRC_DIR)/*.java $(TEST_DIR)/src/*.java
 
 test:
 	$(JAVA) -cp "$(CLASSPATH)" org.junit.runner.JUnitCore src.CalculatorTest src.CalculatorAcceptanceTest
