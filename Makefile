@@ -1,7 +1,7 @@
 JAVAC=javac
 JAVA=java
 SRC_DIR=src
-TEST_DIR=test
+TEST_DIR=test/src
 BUILD_DIR=build
 RELEASE_DIR=release
 CLASSPATH=$(BUILD_DIR):.:"lib/*"
@@ -15,7 +15,7 @@ build:
 	$(JAVAC) -d $(BUILD_DIR) $(SRC_DIR)/*.java $(TEST_DIR)/*.java -cp "lib/*"
 
 test:
-	$(JAVA) -cp $(CLASSPATH) org.junit.runner.JUnitCore CalculatorTest
+	$(JAVA) -cp "$(CLASSPATH)" org.junit.runner.JUnitCore src.CalculatorTest src.CalculatorAcceptanceTest
 
 run:
 	$(JAVA) -cp $(CLASSPATH) src.Main
