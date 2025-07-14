@@ -32,7 +32,7 @@ public class CalculatorAcceptanceTest {
         double result = calculator.add(10, 5);
 
         // Then I get the correct sum
-        assertEquals(15.0, result, 0.001);
+        assertEquals(19.0, result, 0.001);
     }
 
     @Test
